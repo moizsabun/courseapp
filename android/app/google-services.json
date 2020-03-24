@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "532136696664",
+    "firebase_url": "https://resturant-ui-kit.firebaseio.com",
+    "project_id": "resturant-ui-kit",
+    "storage_bucket": "resturant-ui-kit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532136696664:android:340d1d6cb6765f7f35232d",
+        "android_client_info": {
+          "package_name": "com.example.courseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532136696664-qup0pc2lhef9bjh355gqj9qksa0n88lt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIY5RmhXKTGNuR8Nz05WjxDxTIL8p_y-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532136696664-qup0pc2lhef9bjh355gqj9qksa0n88lt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

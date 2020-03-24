@@ -1,5 +1,6 @@
 
 
+import 'package:courseapp/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:courseapp/favourite/favourite_layout.dart';
 
@@ -87,7 +88,7 @@ class Join extends StatelessWidget {
                             
                             onPressed: () {
                               Navigator.of(context).push(
-                                  MaterialPageRoute(builder: (context) => FavHome()) );
+                                  MaterialPageRoute(builder: (context) => HomePage()) );
                                   
                             },
                             color: Colors.red,

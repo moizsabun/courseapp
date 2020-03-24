@@ -46,16 +46,7 @@ class FavHome extends StatelessWidget {
                       fontWeight: FontWeight.w800),
                 ),
               ),
-              StreamBuilder<QuerySnapshot>(
-                  stream:
-                      Firestore.instance.collection('favorites').snapshots(),
-                  builder: (context, snapshot) {
-                    if (!snapshot.hasData) {
-                      return LinearProgressIndicator();
-                    } else {
-                      return _buildList(context, snapshot.data.documents, x);
-                    }
-                  }),
+              buildStreamBuilder(context,x,Icons.favorite),
               //   ],
               // ),
             ],
@@ -72,8 +63,21 @@ class FavHome extends StatelessWidget {
     );
   }
 
+  StreamBuilder<QuerySnapshot> buildStreamBuilder(BuildContext context,List<Widget> x,IconData icon) {
+    return StreamBuilder<QuerySnapshot>(
+                stream:
+                    Firestore.instance.collection('favorites').snapshots(),
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return LinearProgressIndicator();
+                  } else {
+                    return _buildList(context, snapshot.data.documents, x,icon);
+                  }
+                });
+  }
+
   Widget _buildList(
-      BuildContext context, List<DocumentSnapshot> document, List<Widget> x) {
+      BuildContext context, List<DocumentSnapshot> document, List<Widget> x, IconData icon) {
     document.forEach((f) {
       x.add(InkWell(
         onTap: () {},
@@ -98,7 +102,7 @@ class FavHome extends StatelessWidget {
                     right: 8,
                     child: CustomCircularButton(
                       icon: Icon(
-                        Icons.favorite,
+                        icon,
                         color: primaryColor,
                         size: 15,
                       ),

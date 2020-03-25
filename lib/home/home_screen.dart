@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                       ),
                       Cardhome(
                         title: 'Desert',
-                        reviews: '9 Items',
+                        reviews: '10 Items',
                         icon: FontAwesomeIcons.birthdayCake,
                       ),
                       Cardhome(
